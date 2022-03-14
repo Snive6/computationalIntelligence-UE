@@ -1,5 +1,7 @@
 from random import randrange, randint, choice
 
+from Models.ClassPoint import Point
+
 
 def points_generator():
     n = randint(400, 600)
@@ -14,7 +16,7 @@ def points_generator():
         not_repeated.append([x, y])
         waga_towaru = randint(100, 200)
         rodzaj_towaru = choice(types_of_goods)
-        points.append([x, y, waga_towaru, rodzaj_towaru])
+        points.append(Point(x, y, waga_towaru, rodzaj_towaru))
     return points
 
 
