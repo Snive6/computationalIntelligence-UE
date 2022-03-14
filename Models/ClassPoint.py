@@ -1,9 +1,9 @@
 class Point:
-    def __init__(self, x: int, y: int, waga_towaru: int, rodzaj_towaru: str):
+    def __init__(self, x: int, y: int, cargo_load: int, type_of_cargo: str):
         self.__x = x
         self.__y = y
-        self.__waga_towaru = waga_towaru
-        self.__rodzaj_towaru = rodzaj_towaru
+        self.__cargo_load = cargo_load
+        self.__type_of_cargo = type_of_cargo
 
     @property
     def x(self):
@@ -15,8 +15,8 @@ class Point:
 
     @property
     def cargo_load(self):
-        return self.__waga_towaru
+        return self.__cargo_load
 
     @property
     def type_of_cargo(self):
-        return self.__rodzaj_towaru
+        return self.__type_of_cargo
