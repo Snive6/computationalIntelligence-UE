@@ -9,30 +9,14 @@ class Point:
     def x(self):
         return self.__x
 
-    @x.setter
-    def x(self, value: int):
-        self.__x = value
-
     @property
     def y(self):
         return self.__y
 
-    @y.setter
-    def y(self, value: int):
-        self.__y = value
-
     @property
-    def waga_towaru(self):
+    def cargo_load(self):
         return self.__waga_towaru
 
-    @waga_towaru.setter
-    def waga_towaru(self, value: int):
-        self.__waga_towaru = value
-
     @property
-    def rodzaj_towaru(self):
+    def type_of_cargo(self):
         return self.__rodzaj_towaru
-
-    @rodzaj_towaru.setter
-    def rodzaj_towaru(self, value: str):
-        self.__rodzaj_towaru = value

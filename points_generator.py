@@ -6,7 +6,7 @@ from Models.ClassPoint import Point
 def points_generator():
     n = randint(400, 600)
     points = []
-    types_of_goods = ['tuna', 'orange', 'uranium']
+    types_of_cargo = ['tuna', 'orange', 'uranium']
     not_repeated = []
     for i in range(n):
         x = randrange(100)
@@ -14,9 +14,9 @@ def points_generator():
         if [x, y] in not_repeated:
             continue
         not_repeated.append([x, y])
-        waga_towaru = randint(100, 200)
-        rodzaj_towaru = choice(types_of_goods)
-        points.append(Point(x, y, waga_towaru, rodzaj_towaru))
+        cargo_load = randint(100, 200)
+        type_of_cargo = choice(types_of_cargo)
+        points.append(Point(x, y, cargo_load, type_of_cargo))
     return points
 
 
