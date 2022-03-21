@@ -1,22 +1,19 @@
 from random import randrange, randint, choice
 
-from Models.ClassPoint import Point, Type_of_cargo
+from Models.ClassPoint import Point
+from Models.Enums.CargoType import CargoType
 
 
 def points_generator():
     n = randint(400, 600)
-    points = []
     not_repeated = []
-    for i in range(n):
+    for _ in range(n):
         x = randrange(100)
         y = randrange(100)
         if [x, y] in not_repeated:
             continue
         not_repeated.append([x, y])
-        cargo_load = randint(100, 200)
-        type_of_cargo = choice(list(Type_of_cargo))
-        points.append(Point(x, y, cargo_load, type_of_cargo))
-    return points
+        yield Point(x, y, randint(100, 200), choice(list(CargoType)))
 
 
-print(points_generator())
+print(next(points_generator()))
