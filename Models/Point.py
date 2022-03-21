@@ -13,19 +13,19 @@ class Point:
         self.__type_of_cargo = type_of_cargo
 
     @property
-    def x(self):
+    def x(self) -> int:
         return self.__x
 
     @property
-    def y(self):
+    def y(self) -> int:
         return self.__y
 
     @property
-    def cargo_load(self):
+    def cargo_load(self) -> int:
         return self.__cargo_load
 
     @property
-    def cargo_type(self):
+    def cargo_type(self) -> CargoType:
         return self.__type_of_cargo
 
     def distance(self, point) -> float:
