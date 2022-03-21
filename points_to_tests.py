@@ -1,4 +1,4 @@
-from Models.ClassPoint import Point
+from Models.Point import Point
 from Models.Enums.CargoType import CargoType
 
 
