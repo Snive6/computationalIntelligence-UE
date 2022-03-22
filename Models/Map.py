@@ -13,14 +13,19 @@ class Map:
         return self.__points
 
     def distances(self):
-        # ) -> Dict[Tuple[int, int, int, int], float]:
+        # -> [{Tuple[int, int, int, int], float}]:
+        dist = []
         for (idx, point) in enumerate(self.__points):
             if idx == len(self.__points):
                 continue
             for point2 in self.__points[idx + 1 :]:
-                yield {
-                    (point.x, point.y, point2.x, point2.y),
-                    math.sqrt(
-                        (point.x - point2.x) ** 2 + (point.y - point2.y) ** 2
-                    ),
-                }
+                dist.append(
+                    {
+                        (point.x, point.y, point2.x, point2.y),
+                        math.sqrt(
+                            (point.x - point2.x) ** 2
+                            + (point.y - point2.y) ** 2
+                        ),
+                    }
+                )
+        return dist

@@ -4,8 +4,8 @@ from Models.Point import Point
 from Models.Enums.CargoType import CargoType
 
 
-def points_generator():
-    n = randint(400, 600)  # generate the number of points (400-600 samples)
+def points_generator(n: int = randint(400, 600)):
+    # n generate the number of points (400-600 samples)
     not_repeated = []
     for _ in range(n):
         x = randrange(100)  # generate X-coordinates from 0 to 100
